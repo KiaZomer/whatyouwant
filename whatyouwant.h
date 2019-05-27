@@ -21,13 +21,6 @@ int lastChar(string line, int i){
             return i-1;
 }
 
-bool forRateOrCmThisFilmHasBougth(int who, int filmID){
-    for (int i=0;i<users[who]->numOfBoughtFilms();i++)
-        if (users[who]->showFilmBoughtId(i) == filmID) 
-            return true;
-}
-
-
 string whatYouWant(string line,string str){
     return line.substr(firstChar(line,str),lastChar(line,firstChar(line,str))
      + 1 - firstChar(line,str));
